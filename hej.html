@@ -10,13 +10,15 @@
 </head>
 <body>
     <!-- Camera -->
-    <main class="mirror" id="camera">
+    <main id="camera">
         <!-- Camera sensor -->
         <canvas class="mirror" id="camera--sensor"></canvas>
         <!-- Camera view -->
         <video class="mirror" id="camera--view" autoplay playsinline></video>
         <!-- Camera output -->
         <img class="mirror" src="//:0" alt="" id="camera--output">
+        <!-- Camera trigger -->
+        <button id="camera--trigger">Change facingmode</button>
     </main>
     <!-- Reference to your JavaScript file -->
     <script src="app.js"></script>
