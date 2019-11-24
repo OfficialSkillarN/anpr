@@ -38,3 +38,9 @@ html, body{
     right: 20px;
     z-index: 2;
 }
+
+.mirror{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
