@@ -9,7 +9,9 @@ html, body{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transform: scaleX(1);
+    transform: scaleX(-1);
+    -o-transform:scaleX(-1);
+    -webkit-transforms:scaleX(-1);
 }
 
 #camera--trigger{
