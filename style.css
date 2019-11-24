@@ -11,8 +11,7 @@ html, body{
     object-fit: cover;
 }
 #camera--view, #camera--sensor, #camera--output{
-    
-    filter: FlipH;
+
 }
 #camera--trigger{
     width: 200px;
