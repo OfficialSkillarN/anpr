@@ -21,29 +21,17 @@
         <button id="camera--trigger">Take a picture</button>
     </main>
     <!-- Reference to your JavaScript file -->
-    <script src="app.js">
-       setInterval(screenshot());, 5 * 1000;
-       setInterval(function(){ screenshot(); }, 10 * 1000);
-    </script>
+    <script src="app.js"></script>
+
 
     <script>
-        var int=self.setInterval(app.screenshot()r, 60000);
-        var int=self.setInterval(screenshot()r, 6000);
+        //Captures the screen to image, so that we later can perform OCR.
+        setInterval(function() { screenshot(); }, 500);
     </script>
-        <script type="text/javascript">
-    	var audio = new Audio('warning.mp3');
 
-    	setInterval(function(){ audio.play(); }, 5 * 1000);
-
-    </script>
-    
-    <script>
-        window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
-});
+    <script type="text/javascript">
+    var audio = new Audio('warning.mp3');
+	setInterval(function(){ audio.play(); }, 5 * 1000);
     </script>
 </body>
 </html>
