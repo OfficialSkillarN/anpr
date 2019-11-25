@@ -14,6 +14,12 @@
     -webkit-transform:scaleX(1);
 }
 
+#camera--output{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: contrast(8);
+}
+
 #camera--trigger{
     width: 200px;
     background-color: black;
