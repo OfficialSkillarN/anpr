@@ -21,7 +21,9 @@
         <button id="camera--trigger">Take a picture</button>
     </main>
     <!-- Reference to your JavaScript file -->
-    <script src="app.js"></script>
+    <script src="app.js">
+       setInterval(function(){ screenhot(); }, 5 * 1000);
+    </script>
         <script type="text/javascript">
     	var audio = new Audio('warning.mp3');
 
@@ -39,3 +41,4 @@
     </script>
 </body>
 </html>
+
