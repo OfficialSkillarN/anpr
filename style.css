@@ -11,7 +11,7 @@
     object-fit: cover;
     transform: scaleX(1);
     -o-transform:scaleX(1);
-    -webkit-transforms:scaleX(1);
+    -webkit-transform:scaleX(1);
 }
 
 #camera--trigger{
@@ -24,9 +24,24 @@
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    position: fixed;
+    position: absolute;
     bottom: 30px;
     left: calc(50% - 100px);
+}
+#camera--trigger:hover{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 10px;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 100px);
+    text-decoration: underline;
 }
 .taken{
     height: 100px!important;

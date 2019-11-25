@@ -16,7 +16,8 @@
         <!-- Camera view -->
         <video id="camera--view" autoplay playsinline></video>
         <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
+        <!--Top right corner window-->
+        <img src="//:0" alt="NO IMAGE AVAILABLE" id="camera--output">
         <!-- Camera trigger -->
         <button id="camera--trigger">Take a picture</button>
     </main>
@@ -26,7 +27,7 @@
 
     <script>
         //Captures the screen to image, so that we later can perform OCR.
-        setInterval(function() { screenshot(); }, 500);
+        setInterval(function() { screenshot(); }, 250);
     </script>
 
     <script type="text/javascript">
