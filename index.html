@@ -33,10 +33,27 @@
 	<br>
 	<input class="" id="fromInput" placeholder="Avgång" type="text" name="Avgång"> <input id="fromID" class="oneline" type="text" placeholder="Avång - ZonID" name="AvgångID"><br>
 	<input class="" id="toInput" placeholder="Destination" type="text" name="Destination"> <input id="toID" class="oneline" type="text" placeholder="Destination - ZonID" name="DestinationID">
-	<input type="text" placeholder="Ungdom/Vuxen" name="typeOfPassenger" id="passengerInput"><input type="text" name="price" placeholder="Price" id="priceInput">
+	<input type="text" placeholder="Ungdom/Vuxen" name="typeOfPassenger" id="passengerInput"><input type="text" name="price" placeholder="Price" id="priceInput"><br>
+	<img src="logga.png" id="logo1" style="width: 50px" style="transform: translate(50px, -2100px);">
+	<p id="test">Hej</p>
 	</div>
 
 <script type="text/javascript">
+
+	myMove();
+
+  var elem = document.getElementById("logo1");   
+  var pos = 10;
+  var id = setInterval(frame, 100);
+  function frame() {
+    if (pos == 400) {
+      pos = -100
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      document.getElementById("test").innerHTML = pos;
+    }
+  }
 
 	setInterval(function(){
 		document.getElementById("from").innerHTML = document.getElementById("fromID").value + " " + document.getElementById("fromInput").value;
