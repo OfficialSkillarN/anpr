@@ -26,6 +26,7 @@
 	<p id="randomID" style="transform: translate(25px, -1585px);" class="smallFont JLTFont">933</p>
 	<p style="transform: translate(600px, -1665px);" class="smallFont JLTFont">ID 128352322 - 980</p>
 	<p style="transform: translate(25px, -1690px);" class="smallFont JLTFont">Jönköpings Länstrafik</p>
+	<p id="tickerPayed" style="transform: translate(25px, -1645px);" class="smallFont JLTFont">Biljett betald</p>
 	</div>
 
 <script type="text/javascript">
@@ -256,6 +257,7 @@ document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.get
 
 
 document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
+document.getElementById("tickerPayed").innerHTML = currentYear + "-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute+":"+d.getSeconds() + " Biljett betald"
 
 
 </script>
