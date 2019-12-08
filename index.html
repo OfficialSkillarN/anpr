@@ -24,17 +24,14 @@
 	<p id="UpdatingTimer" style="transform: translate(25px, -1505px);" class="mediumFont JLTFont black">Updating timer</p>
 	<p id="giltig" class="smallFont black JLTFont" style="transform: translate(25px, -1555px);">Giltig</p>
 	<p id="randomID" style="transform: translate(25px, -1585px);" class="smallFont JLTFont">933</p>
+	<p style="transform: translate(25px, -1625px);" class="smallFont JLTFont">Jönköpings Länstrafik</p>
 	</div>
 
 <script type="text/javascript">
 
 	setInterval(function(){
-
-
 	}, 100);
 
-
-	
  	var randomValue = Math.floor((Math.random() * 900) + 1);
 	
  	document.getElementById("randomID").innerHTML = randomValue;
@@ -257,7 +254,7 @@ else
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.getMonth() + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 
 
-document.getElementById("giltig").innerHTML = "Gilitg " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
+document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
 
 
 </script>
