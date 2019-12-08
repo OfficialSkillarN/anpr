@@ -26,7 +26,7 @@
 	<p id="randomID" style="transform: translate(25px, -1585px);" class="smallFont JLTFont">933</p>
 	<p style="transform: translate(600px, -1665px);" class="smallFont JLTFont">ID 128352322 - 980</p>
 	<p style="transform: translate(25px, -1690px);" class="smallFont JLTFont">Jönköpings Länstrafik</p>
-	<p id="tickerPayed" style="transform: translate(25px, -1645px);" class="smallFont JLTFont">Biljett betald</p>
+	<p id="tickerPayed" style="transform: translate(25px, -1655px);" class="smallFont JLTFont">Biljett betald</p>
 	</div>
 
 <script type="text/javascript">
@@ -70,6 +70,9 @@ var d = new Date();
 	var currentHour = d.getHours();
 	var currentMinute = d.getMinutes();
 	var currentSeconds = d.getSeconds();
+
+	if (currentSeconds<=9)
+		currentSeconds = "0"+currentSeconds;
 
 var oneHourInFuture;
 var tenMinutesInFuture;
