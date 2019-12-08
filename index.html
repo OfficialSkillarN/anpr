@@ -141,11 +141,11 @@ if (currentHour == 23)
 if (currentMinute == 0)
 	tenMinutesInFuture = currentMinute+10;
 if (currentMinute == 1)
-	tenMinutesInFuture = 12;
+	tenMinutesInFuture = currentMinute+10;
 if (currentMinute == 2)
 	tenMinutesInFuture = currentMinute+10;
 if (currentMinute == 3)
-	tenMinutesInFuture = 13;
+	tenMinutesInFuture = currentMinute+10;
 if (currentMinute == 4)
 	tenMinutesInFuture = currentMinute+10;
 if (currentMinute == 5)
@@ -277,8 +277,8 @@ if (currentMonth == 11)
 		tenMinutesInFuture = 0;
 	}
 
-if (d.getMinutes() <= 9)
-document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
+if (tenMinutesInFuture <= 9)
+document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":0" + tenMinutesInFuture;
 else 
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 
