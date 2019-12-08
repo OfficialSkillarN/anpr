@@ -282,8 +282,8 @@ document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+curre
 else 
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 
-
-document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
+if (tenMinutesInFuture <= 9)
+document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":0"+tenMinutesInFuture;
 document.getElementById("tickerPayed").innerHTML = currentYear + "-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute+":"+d.getSeconds() + " Biljett betald"
 
 
