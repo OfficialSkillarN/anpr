@@ -83,12 +83,7 @@ var d = new Date();
 	if (currentSeconds<=9)
 		currentSeconds = "0"+currentSeconds;
 
-	if (currentMonth == 11)
-		currentMonth = 12;
-	if (currentMonth == 0)
-		currentMonth = 1;
-	if (currentMonth == 1)
-		currentMonth = 2; 
+
 
 
 var oneHourInFuture;
@@ -270,10 +265,17 @@ if (currentMinute == 59)
 if (currentMinute == 0)
 	tenMinutesInFuture = 10;
 
+if (currentMonth == 11)
+		currentMonth = 12;
+	if (currentMonth == 0)
+		currentMonth = 1;
+	if (currentMonth == 1)
+		currentMonth = 2; 
+
 if (d.getMinutes() <= 9)
-document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.getMonth() + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
+document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 else 
-document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.getMonth() + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
+document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 
 
 document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
