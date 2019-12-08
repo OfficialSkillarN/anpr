@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!---Charset-->
+	<meta charset="UTF-8">
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Gothic+A1|Sawarabi+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	
 	<title>JLT</title>
-</head>
-<body>
+</head><body>
+
 	
-<img src="jlt.png">
-	<p class="mediumFont JLTFont" style="transform: translate(25px, -1965px);">Ungdom 18:00 SEK</p>
+<img src="https://raw.githubusercontent.com/OfficialSkillarN/anpr/master/jlt.png" >
+	<p class="mediumFont JLTFont" style="transform: translate(25px, -1945px);">Ungdom 18:00 SEK</p>
 
 	<p class="JLTFont from mediumFont" style="transform: translate(25px, -2030px);">981 Juneporten Jönköping</p>
 	<p class="JLTFont destination mediumFont" style="transform: translate(25px, -2100px);">981 Nässjö Resecentrum</p>
 	<p id="ID_date_clock" class="JLTFont biggerFont debug">Date</p>
 	<!--Updating timer-->
-	<p class="mediumFont debug">Updating timer</p>
+	<p id="UpdatingTimer"class="mediumFont debug">Updating timer</p>
 	<p class="smallFont debug">Giltig</p>
 	<p class="smallFont debug">933</p>
 
+<script type="text/javascript">
+	
+
+	
+
+
+	setInterval(function(){
+		var d = new Date();
+		var currentYear = d.getFullYear();
+	var currentMonth = d.getMonth();
+	var currentDay = d.getDate();
+	var currentHour = d.getHours();
+	var currentMinute = d.getMinutes();
+	var currentSeconds = d.getSeconds();
+
+	if (currentSeconds <= 9)
+		currentSeconds = "0" + d.getSeconds();
+
+
+	if (currentMinute <= 9)
+	 document.getElementById("UpdatingTimer").innerHTML =  currentYear + "-"+currentMonth+"-"+currentDay+" "+currentHour+":0"+currentMinute+":"+currentSeconds
+	else
+	 document.getElementById("UpdatingTimer").innerHTML =  currentYear + "-"+currentMonth+"-"+currentDay+" "+currentHour+":"+currentMinute+":"+currentSeconds
+
+
+
+	}, 1000);
+
+</script>
 <script>
 var d = new Date();
 
@@ -230,13 +262,13 @@ document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.get
 		color: black;
 	}
 	.JLTFont {
-		    font-family: 'Sawarabi Gothic', sans-serif;
+		    font-family: 'Roboto', sans-serif;
 	}
 	.biggerFont {
 		font-size: 80px;
 	}
 	.mediumFont {
-		font-size: 45px;
+		font-size: 60px;
 	}
 	.smallFont {
 		font-size: 35px;
