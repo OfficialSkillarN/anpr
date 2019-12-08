@@ -272,6 +272,11 @@ if (currentMonth == 11)
 	if (currentMonth == 1)
 		currentMonth = 2; 
 
+	if (tenMinutesInFuture == 60) {
+		oneHourInFuture = oneHourInFuture+1;
+		tenMinutesInFuture = 0;
+	}
+
 if (d.getMinutes() <= 9)
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 else 
