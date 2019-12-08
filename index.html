@@ -22,7 +22,7 @@
 	<p id="ID_date_clock" style="transform: translate(25px, -1450px);" class="JLTFont biggerFont white">Date Future</p>
 	<!--Updating timer-->
 	<p id="UpdatingTimer" style="transform: translate(25px, -1505px);" class="mediumFont JLTFont black">Updating timer</p>
-	<p class="smallFont debug JLTFont" style="transform: translate(25px, -1555px);">Giltig</p>
+	<p id="giltig" class="smallFont debug JLTFont" style="transform: translate(25px, -1555px);">Giltig</p>
 	<p id="randomID" style="transform: translate(25px, -1585px);" class="smallFont JLTFont">933</p>
 	</div>
 
@@ -32,6 +32,8 @@
 
 
 	}, 100);
+
+
 	
  	var randomValue = Math.floor((Math.random() * 900) + 1);
 	
@@ -249,6 +251,9 @@ if (d.getMinutes() <= 9)
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.getMonth() + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
 else 
 document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.getMonth() + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
+
+
+document.getElementById("giltig").innerHTML = "Gilitg " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":"+tenMinutesInFuture;
 
 
 </script>
