@@ -65,8 +65,12 @@
 <script>
 var d = new Date();
 
-var currentHour = d.getHours();
-var currentMinute = d.getMinutes();
+	var currentYear = d.getFullYear();
+	var currentMonth = d.getMonth();
+	var currentDay = d.getDate();
+	var currentHour = d.getHours();
+	var currentMinute = d.getMinutes();
+	var currentSeconds = d.getSeconds();
 
 var oneHourInFuture;
 var tenMinutesInFuture;
@@ -285,7 +289,7 @@ document.getElementById("giltig").innerHTML = "Gilitg " + currentYear+"-"+curren
 		font-size: 60px;
 	}
 	.smallFont {
-		font-size: 35px;
+		font-size: 25px;
 	}
 	.white {
 		color: white;
