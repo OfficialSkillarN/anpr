@@ -18,15 +18,15 @@
 	<p class="JLTFont destination mediumFont" style="transform: translate(25px, -2100px);">981 Nässjö Resecentrum</p>
 	<p id="ID_date_clock" class="JLTFont biggerFont debug">Date</p>
 	<!--Updating timer-->
-	<p id="UpdatingTimer"class="mediumFont debug">Updating timer</p>
-	<p class="smallFont debug">Giltig</p>
-	<p class="smallFont debug">933</p>
+	<p id="UpdatingTimer"class="mediumFont debug JLTFont">Updating timer</p>
+	<p class="smallFont debug JLTFont">Giltig</p>
+	<p id="randomID" style="transform: translate(25px, -1650px);" class="smallFont JLTFont">933</p>
 
 <script type="text/javascript">
 	
-
+ 	var randomValue = Math.floor((Math.random() * 900) + 1);
 	
-
+ 	document.getElementById("randomID").innerHTML = randomValue;
 
 	setInterval(function(){
 		var d = new Date();
@@ -271,7 +271,7 @@ document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+d.get
 		font-size: 60px;
 	}
 	.smallFont {
-		font-size: 35px;
+		font-size: 25px;
 	}
 	.white {
 		color: white;
