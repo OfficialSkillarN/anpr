@@ -13,11 +13,11 @@
 <div>
 	
 <img src="https://raw.githubusercontent.com/OfficialSkillarN/anpr/master/jlt.png" >
-	<p class="mediumFont JLTFont" style="transform: translate(25px, -1975px);">Ungdom 18:00 SEK</p>
+	<p class="mediumFont JLTFont" id="typeofPassengerAndPrice" style="transform: translate(25px, -1975px);">Ungdom 18:00 SEK</p>
 
-	<p class="JLTFont from mediumFont" style="transform: translate(25px, -2045px);">981 Juneporten Jönköping</p>
+	<p class="JLTFont from mediumFont" id="from" style="transform: translate(25px, -2045px);">981 Juneporten Jönköping</p>
 
-	<p class="JLTFont destination mediumFont" style="transform: translate(25px, -2125px);">981 Nässjö Resecentrum</p>
+	<p class="JLTFont destination mediumFont" id="to" style="transform: translate(25px, -2125px);">981 Nässjö Resecentrum</p>
 
 	<p id="ID_date_clock" style="transform: translate(25px, -1450px);" class="JLTFont biggerFont white">Date Future</p>
 	<!--Updating timer-->
@@ -31,13 +31,18 @@
 	<br>
 	<br>
 	<br>
-	<input class="" placeholder="Avgång" type="text" name="Avgång"> <input class="oneline" type="text" placeholder="Avång - ZonID" name="AvgångID"><br>
-	<input class="" placeholder="Destination" type="text" name="Destination"> <input class="oneline" type="text" placeholder="Destination - ZonID" name="DestinationID">
+	<input class="" id="fromInput" placeholder="Avgång" type="text" name="Avgång"> <input id="fromID" class="oneline" type="text" placeholder="Avång - ZonID" name="AvgångID"><br>
+	<input class="" id="toInput" placeholder="Destination" type="text" name="Destination"> <input id="toID" class="oneline" type="text" placeholder="Destination - ZonID" name="DestinationID">
+	<input type="text" placeholder="Ungdom/Vuxen" name="typeOfPassenger" id="passengerInput"><input type="text" name="price" placeholder="Price" id="priceInput">
 	</div>
 
 <script type="text/javascript">
 
 	setInterval(function(){
+		document.getElementById("from").innerHTML = document.getElementById("fromID").value + " " + document.getElementById("fromInput").value;
+		document.getElementById("to").innerHTML = document.getElementById("toID").value + " " + document.getElementById("toInput").value;
+		document.getElementById("typeofPassengerAndPrice").innerHTML = document.getElementById("passengerInput").value + " " + document.getElementById("priceInput").value + ":00 SEK";
+
 	}, 100);
 
  	var randomValue = Math.floor((Math.random() * 900) + 1);
