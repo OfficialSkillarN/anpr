@@ -3,6 +3,7 @@
 <head>
 	<!--Loads fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Passion+One&display=swap" rel="stylesheet">
 	<!--Sets the title-->
 	<title>Schold - Developer</title>
 </head>
@@ -12,14 +13,28 @@
 	<p id="desc" class="translateY blackUnderline colorWhite fontSize50 center underline">a self-taught web developer</p>
 	<center style="transform: translateY(-150px);">
 	<img src="images/me.jpg" class="translateYr roundImage center" width=250 alt="Picture of me">
-	<h3 class="bio">Guy Fawkes - Game Idea</h3>
-	<h3 class="bio"><u>Story</u></h3>
+	<h3 class="bio">About Me</h3>
 	<p class="bio">
-The goal in the game is to help Guy Fawkes and Robert Catesby where player 1 is Guy Fawkes, <br>and Player 2 is Robert Catesby to kill the King of England, by exploding powder from a cellar beneath the parliament.<br>
+		My name is Rasmus, a self-taught web developer, mainly in html, css and partly js.<br>
+		I'm 17 years old, 1st Dec. 2019. My current school is LBS in Jönköping. <br>
+		The reason why I made this website is because I'm gonna study webdevelopment next year in school</p>
+		<div class="debug">
+	<marquee style="transform: translateY(12px);" id="" class="bio correctFont fontSize30" direction="left" scrollamount="10" behavior="alternate"><p class="quote"><span class="quotationMark" style="font-size: 70px;">"</span>Nothings Over til' it's over - Rocky</p></marquee>
+	</center>
 
-First you have to gather the team, by doing missions, get contacts, and get to know and trust eachother. <br>Once you meet, the second player can then join the game.<br>
-You will have gather alot of powder, or gunpowder to be exact. <br>You will either steal these barrels, or buy them. <br>They cost alot, if you choose to steal them, only one place in England have the right type of gunpowder.<br>
-You will have to guess which type of powder is the right one, </p>
+	<center class="projects">
+		<p class="fontSize50">My Projects</p>
+	<a class="projects colorBlack fontSize50 center" href="customCMDLook/index.html">CMD</a>
+	<a class="projects colorBlack fontSize50 center" href="" onclick="showMessage('This is not available yet')">JLT</a>
+	<a class="projects colorBlack fontSize50 center" href="guyfawkes/index.html">Guy Fawkes</a>
+	<a class="projects colorBlack fontSize50 center" href="babyYodaClicker/index.html">Baby Yoda Clicker</a>
+</center>
+<footer>
+	<center>
+		<marquee style="transform: translateY(15px);" id="ip" class="bio correctFont fontSize30" direction="left" scrollamount="10" behavior="alternate"></marquee>
+		<!--<p style="transform: translateY(-5px);" class="fontSize50">Schold 2019 &copy</p>-->
+	</center>
+</footer>
 </body>
 </html>
 
@@ -40,7 +55,7 @@ You will have to guess which type of powder is the right one, </p>
     <script> 
         $.getJSON("https://api.ipify.org?format=json", 
 			function(data) { 
-            $("#gfg").html("Your IP: " + data.ip); 
+            $("#ip").html("Your IP: " + data.ip); 
         }) 
     </script> 
 
@@ -69,8 +84,17 @@ You will have to guess which type of powder is the right one, </p>
 		background-color: grey;
 		height: 50px;
 	}
+
+	.quotationMark {
+		font-family: 'Passion One', cursive;
+	}
 	.correctFont {
 		font-family: 'Bebas Neue', cursive;
+	}
+
+	.debug{
+		width: 850px;
+		display: inline-block;
 	}
 
 	.roundImage {
