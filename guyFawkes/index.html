@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Loads fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
+	<!--Sets the title-->
+	<title>Schold - Developer</title>
+</head>
+<!--Starts the body tag-->
+<body background="images/background.jpg" style="background-repeat: no-repeat; background-size: cover;">
+	<h1 class="verticalCenter colorWhite fontSize150 center underline bolder">SCHOLD</h1>
+	<p id="desc" class="translateY blackUnderline colorWhite fontSize50 center underline">a self-taught web developer</p>
+	<center style="transform: translateY(-150px);">
+	<img src="images/me.jpg" class="translateYr roundImage center" width=250 alt="Picture of me">
+	<h3 class="bio">Guy Fawkes - Game Idea</h3>
+	<h3 class="bio"><u>Story</u></h3>
+	<p class="bio">
+The goal in the game is to help Guy Fawkes and Robert Catesby where player 1 is Guy Fawkes, <br>and Player 2 is Robert Catesby to kill the King of England, by exploding powder from a cellar beneath the parliament.<br>
+
+First you have to gather the team, by doing missions, get contacts, and get to know and trust eachother. <br>Once you meet, the second player can then join the game.<br>
+You will have gather alot of powder, or gunpowder to be exact. <br>You will either steal these barrels, or buy them. <br>They cost alot, if you choose to steal them, only one place in England have the right type of gunpowder.<br>
+You will have to guess which type of powder is the right one, </p>
+</body>
+</html>
+
+<script type="text/javascript">
+	function showAlert() {
+		alert("This is not yet published, please try again later.");
+	} 
+	function showMessage(message) {
+		alert(message);
+	} 
+</script>
+
+<!--Gets you local IPv4 and replaces the value of any component with id "gfg" with your IP adress-->
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+
+  
+    <script> 
+        $.getJSON("https://api.ipify.org?format=json", 
+			function(data) { 
+            $("#gfg").html("Your IP: " + data.ip); 
+        }) 
+    </script> 
+
+<style type="text/css">
+	
+	p{
+		font-family: 'Bebas Neue', cursive;
+	}
+
+	h1{
+		font-family: 'Bebas Neue', cursive;
+		font-style: italic;
+	}
+
+	h3{
+		font-family: 'Bebas Neue', cursive;
+		font-size: 40px;
+	}
+
+	a{
+		text-decoration: underline;
+		font-family: 'Bebas Neue', cursive;
+	}
+
+	footer{
+		background-color: grey;
+		height: 50px;
+	}
+	.correctFont {
+		font-family: 'Bebas Neue', cursive;
+	}
+
+	.roundImage {
+		border-radius: 50%;
+	}
+
+	.quote {
+		font-weight: lighter;
+		line-height: 22px;
+		font-style: italic;
+		font-size: 25px;
+	}
+
+	.bio {
+		font-weight: lighter;
+		line-height: 22px;
+		font-size: 25px;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.projects{
+		margin: 25px;
+		transform: translateY(-50%);
+	}
+
+	.translateY{
+		transform: translateY(-200%);
+		filter: blur(2px);
+	}
+
+	.verticalCenter {
+		vertical-align: middle;
+	}
+
+	.oneLine {
+		display: inline;
+	}
+
+	.underline {
+		text-decoration: underline;
+		text-decoration-color: black;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	.bolder {
+		font-weight: bolder;
+	}
+	.fontSize30{
+		font-size: 30px;
+	}
+
+	.fontSize50{
+		font-size: 50px;
+	}
+
+	.fontSize150{
+		font-size: 150px;
+	}
+
+	.colorWhite {
+		color: white;
+	}
+
+	.colorBlack {
+		color: black;
+	}
+
+
+
+</style>

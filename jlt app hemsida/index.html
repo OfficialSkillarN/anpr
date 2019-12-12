@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!---Charset-->
+	<meta charset="UTF-8">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Gothic+A1|Sawarabi+Gothic&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	
+	<title>JLT</title>
+</head>
+<body>
+<div>
+	
+<img src="https://raw.githubusercontent.com/OfficialSkillarN/anpr/master/jlt.png" >
+	<p class="mediumFont JLTFont" id="typeofPassengerAndPrice" style="transform: translate(25px, -1975px);">Ungdom 18:00 SEK</p>
+
+	<p class="JLTFont from mediumFont" id="from" style="transform: translate(25px, -2045px);">981 Juneporten Jönköping</p>
+
+	<p class="JLTFont destination mediumFont" id="to" style="transform: translate(25px, -2125px);">981 Nässjö Resecentrum</p>
+
+	<p id="ID_date_clock" style="transform: translate(25px, -1450px);" class="JLTFont biggerFont white">Date Future</p>
+	<!--Updating timer-->
+	<p id="UpdatingTimer" style="transform: translate(25px, -1505px);" class="mediumFont JLTFont black">Updating timer</p>
+	<p id="giltig" class="smallFont black JLTFont" style="transform: translate(25px, -1555px);">Giltig</p>
+	<p id="randomID" style="transform: translate(25px, -1585px);" class="smallFont JLTFont">933</p>
+	<p style="transform: translate(600px, -1665px);" class="smallFont JLTFont">ID 128352322 - 980</p>
+	<p style="transform: translate(25px, -1690px);" class="smallFont JLTFont">Jönköpings Länstrafik</p>
+	<p id="tickerPayed" style="transform: translate(25px, -1695px);" class="smallFont JLTFont">Biljett betald</p>
+	<p id="tickerPayed" style="transform: translate(25px, -1720px);" class="smallFont JLTFont">Swish</p>
+	<br>
+	<br>
+	<br>
+	<input class="" id="fromInput" placeholder="Avgång" type="text" name="Avgång"> <input id="fromID" class="oneline" type="text" placeholder="Avång - ZonID" name="AvgångID"><br>
+	<input class="" id="toInput" placeholder="Destination" type="text" name="Destination"> <input id="toID" class="oneline" type="text" placeholder="Destination - ZonID" name="DestinationID">
+	<input type="text" placeholder="Ungdom/Vuxen" name="typeOfPassenger" id="passengerInput"><input type="text" name="price" placeholder="Price" id="priceInput"><br>
+	</div>
+
+<script type="text/javascript">
+
+
+	setInterval(function(){
+		document.getElementById("from").innerHTML = document.getElementById("fromID").value + " " + document.getElementById("fromInput").value;
+		document.getElementById("to").innerHTML = document.getElementById("toID").value + " " + document.getElementById("toInput").value;
+		document.getElementById("typeofPassengerAndPrice").innerHTML = document.getElementById("passengerInput").value + " " + document.getElementById("priceInput").value + ".00 SEK";
+
+	}, 100);
+
+ 	var randomValue = Math.floor((Math.random() * 900) + 1);
+	
+ 	document.getElementById("randomID").innerHTML = randomValue;
+
+	setInterval(function(){
+		var d = new Date();
+		var currentYear = d.getFullYear();
+	var currentMonth = d.getMonth();
+	var currentDay = d.getDate();
+	var currentHour = d.getHours();
+	var currentMinute = d.getMinutes();
+	var currentSeconds = d.getSeconds();
+
+	if (currentSeconds <= 9)
+		currentSeconds = "0" + d.getSeconds();
+
+
+	if (currentMonth == 11)
+		currentMonth = 12;
+	if (currentMonth == 0)
+		currentMonth = 1;
+	if (currentMonth == 1)
+		currentMonth = 2; 
+
+
+
+	if (currentMinute <= 9)
+	 document.getElementById("UpdatingTimer").innerHTML =  currentYear + "-"+currentMonth+"-"+currentDay+" "+currentHour+":0"+currentMinute+":"+currentSeconds
+	else
+	 document.getElementById("UpdatingTimer").innerHTML =  currentYear + "-"+currentMonth+"-"+currentDay+" "+currentHour+":"+currentMinute+":"+currentSeconds
+
+
+
+	}, 1000);
+
+</script>
+<script>
+var d = new Date();
+
+	var currentYear = d.getFullYear();
+	var currentMonth = d.getMonth();
+	var currentDay = d.getDate();
+	var currentHour = d.getHours();
+	var currentMinute = d.getMinutes();
+	var currentSeconds = d.getSeconds();
+
+	if (currentSeconds<=9)
+		currentSeconds = "0"+currentSeconds;
+
+
+
+
+var oneHourInFuture;
+var tenMinutesInFuture;
+
+if (currentHour == 0)
+	oneHourInFuture = 1;
+if (currentHour == 1)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 2)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 3)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 4)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 5)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 6)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 7)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 8)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 9)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 10)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 11)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 12)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 13)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 14)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 15)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 16)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 17)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 18)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 19)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 20)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 21)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 22)
+	oneHourInFuture = currentHour+1;
+if (currentHour == 23)
+	oneHourInFuture = 0;
+
+if (currentMinute == 0)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 1)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 2)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 3)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 4)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 5)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 6)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 7)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 8)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 9)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 10)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 11)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 12)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 13)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 14)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 15)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 16)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 17)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 18)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 18)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 19)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 20)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 21)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 22)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 23)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 24)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 25)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 26)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 27)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 28)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 29)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 30)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 31)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 32)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 33)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 34)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 35)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 36)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 37)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 38)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 39)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 40)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 41)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 42)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 43)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 44)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 45)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 46)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 47)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 48)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 49)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 50)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 50)
+	tenMinutesInFuture = currentMinute+10;
+if (currentMinute == 51)
+	tenMinutesInFuture = 1;
+if (currentMinute == 52)
+	tenMinutesInFuture = 2;
+if (currentMinute == 53)
+	tenMinutesInFuture = 3;
+if (currentMinute == 54)
+	tenMinutesInFuture = 4;
+if (currentMinute == 55)
+	tenMinutesInFuture = 5;
+if (currentMinute == 56)
+	tenMinutesInFuture = 6;
+if (currentMinute == 57)
+	tenMinutesInFuture = 7;
+if (currentMinute == 58)
+	tenMinutesInFuture = 8;
+if (currentMinute == 59)
+	tenMinutesInFuture = 9;
+if (currentMinute == 0)
+	tenMinutesInFuture = 10;
+
+if (currentMonth == 11)
+		currentMonth = 12;
+	if (currentMonth == 0)
+		currentMonth = 1;
+	if (currentMonth == 1)
+		currentMonth = 2; 
+
+	if (tenMinutesInFuture == 60) {
+		oneHourInFuture = oneHourInFuture+1;
+		tenMinutesInFuture = 0;
+	}
+
+if (tenMinutesInFuture <= 9)
+document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":0" + tenMinutesInFuture;
+else 
+document.getElementById("ID_date_clock").innerHTML = d.getFullYear() + "-"+currentMonth + "-" + d.getDate() + " " + oneHourInFuture + ":" + tenMinutesInFuture;
+
+if (tenMinutesInFuture <= 9)
+document.getElementById("giltig").innerHTML = "Giltig " + currentYear+"-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute + " - "+oneHourInFuture+":0"+tenMinutesInFuture;
+document.getElementById("tickerPayed").innerHTML = currentYear + "-"+currentMonth+"-"+currentDay + " " + currentHour+":"+currentMinute+":"+d.getSeconds() + " Biljett betald"
+
+
+</script>
+</body>
+</html>
+
+
+<style type="text/css">
+	img {
+		width: 102%;
+		height: 100%;
+	}
+	.from {
+		/*transform: translate(25px, 380px);*/
+		color: black;
+	}
+	.destination {
+		font-size: 45px;
+		/*transform: translate(25px, 340px);*/
+		color: black;
+	}
+	.JLTFont {
+		    font-family: 'Roboto', sans-serif;
+	}
+
+	input{
+		transform: translate(25px, -700px);
+		font-size: 35px;
+		height: 70px;
+	}
+
+	.biggerFont {
+		font-size: 80px;
+	}
+	.mediumFont {
+		font-size: 60px;
+	}
+	.smallFont {
+		font-size: 35px;
+	}
+	.white {
+		color: white;
+	}
+	.black {
+		color: black;
+	}
+	.debug{
+		color: blue;
+	}
+	.oneLine {
+		display: inline;
+	}
+
+</style>
