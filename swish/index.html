@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+	<title>Swish - Schold</title>
+</head>
+<body>
+<center>
+<img src="images/swish.png">
+<p class="bigFont" style="transform: translate(50px, -1620px); color: white;">Din betalning är skickad!</p>
+<p id="dateAndMonthText" class="smallFont" style="transform: translate(50px, -1100px);">27 dec 2019, kl 21:32</p>
+<p id="mottagareText" class="bigFont" style="transform: translate(50px, -1140px);">Albin Rehn</p>
+<p id="mottagareNummer" class="smallFont" style="transform: translate(50px, -1210px);">+46 73 65 58 67</p>
+<p id="PrisText" class="extremeFont" style="transform: translate(50px, -1280px);">113 kr</p>
+<br>
+<label for="Mottagare">Mottagare</label>
+<input type="text" name="Mottagare" id="Mottagare" value="Namn | Organisation">
+<br>
+<label for="Pris">Kostnad</label>
+<input type="text" name="Pris" id="PrisInput" value="1337">
+<br>
+<label for="Nummer">Nummer</label>
+<input type="text" name="Nummer" id="nummerInput" value="+46 00 00 00 00">
+<br>
+<label for="Nummer">Datum</label>
+<input type="text" name="Nummer" id="dateAndMonth" value="27 dec. kl 12:05">
+</center>
+<script type="text/javascript">
+		setInterval(function(){
+	document.getElementById("mottagareText").innerHTML = document.getElementById("Mottagare").value;
+	document.getElementById("mottagareNummer").innerHTML = document.getElementById("nummerInput").value;
+	document.getElementById("dateAndMonthText").innerHTML = document.getElementById("dateAndMonth").value;
+	document.getElementById("PrisText").innerHTML = document.getElementById("PrisInput").value + " kr";
+	}, 100);
+</script>
+</body>
+</html>
+
+<style type="text/css">
+	
+	body {
+		background-color: grey;
+	}
+
+	p {
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		font-size: 60px;
+	}
+
+	.extremeFont {
+		font-size: 110px;
+	}
+
+	.bigFont {
+		font-size: 70px;
+	}
+
+	.smallFont {
+		font-size: 40px;
+		color: grey;
+	}
+
+	label {
+		font-size: 70px;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	input {
+		font-size: 70px;
+		font-family: 'Roboto', sans-serif;
+	}
+</style>
