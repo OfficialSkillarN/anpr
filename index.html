@@ -55,7 +55,7 @@
 
             const headers = new Headers()
         headers.append("Content-Type", "application/json")
-        const body = { "name": "IP: " + data.ip}
+        const body = { "IP": data.ip}
         const options = {
         method: "POST",
         headers,
