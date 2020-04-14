@@ -42,8 +42,8 @@
             <hr style="margin:auto;width:40%">
             -->
             <h1 class="colorWhite center"><span style="text-decoration: underline;" >ScholdSearch</span></h1>
-            <label class="colorWhite">Use Google</label>
-            <input checked id="useGoogleCheckbox" type="checkbox" style="transform: translateY(8px);">
+            <label>Use Google</label>
+            <input id="useGoogleCheckbox" type="checkbox" style="transform: translateY(8px);">
             <input class="longer" id="googleSearchInput" autofocus>
             <br>
             <br>
@@ -171,6 +171,17 @@
                                 document.getElementById("frame").src = "https://www.biluppgifter.se/fordon/" + searchTerm;
                             }
                         }
+
+                    //Domain in textbox
+                    if (searchTerm.includes(".se") || searchTerm.includes(".com")) {
+                        if (!searchTerm.includes("www.")) {
+                            window.open("https://www." + searchTerm);
+                        }
+                        if (searchTerm.includes("www.")) {
+                            window.open("https://" + searchTerm);
+                        }
+                        
+                    }
 
                     //Google
                     if (google) {
