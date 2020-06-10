@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arkala - Official Website</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="header">
+				<div class="logo">
+					<a href="#"><img src="img/logo.png" alt="Arkala Logo"></a>
+				</div>
+
+        </div>
+        <h1 id="lastUpdated">Senast Uppdaterad</h1>
+        <h1 id="motd"></h1>
+			<div class="playercount">
+				<script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <div style="font-size: 85px;" class="server-status">
+      Arkala är just nu <span style="color: white;" class="server-online">hej</span>!
+    </div>
+    <p style="font-size: 45px;"><span id="players"></span></p>
+    <script>
+      MinecraftAPI.getServerStatus('81.170.199.39', {
+        port: 25565
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Error 312';
+        }
+
+        let unix_timestamp = status.last_updated
+
+        var date = new Date(unix_timestamp * 1000);
+    
+        var hours = date.getHours();
+        
+        var minutes = "0" + date.getMinutes();
+       
+        var seconds = "0" + date.getSeconds();
+
+        var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+        document.getElementById("lastUpdated").innerHTML = "Senast uppdaterad " + formattedTime;
+
+        document.querySelector('.server-online').innerHTML = status.online ? 'igång' : 'avstängd';
+        if (document.querySelector('.server-online').innerHTML.includes("igång")) {
+            document.querySelector('.server-online').style.color = "green";
+            document.getElementById("motd").innerHTML = status.motd;
+            document.getElementById("players").innerHTML = "Nuvarande spelare inne: " + status.players.now + "/" + status.players.max;
+        }
+        else {
+            document.querySelector('.server-online').style.color = "red";
+        }
+
+      });
+    </script>
+		</div>
+		</header>
+        <center>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNnCFhD8IcSrfLi2eyHPbbH3kuFgzNsiJr96oZhPW2I5Cu7A/viewform?embedded=true" width="640" height="2206" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
+        </center>
+		<footer>
+			<p>Copyright &copy; Arkala 2019</p>
+		</footer>
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

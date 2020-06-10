@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Arkala</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script src="" async defer></script>
+        <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <div class="server-status">
+      Arkala är just nu <span class="server-online"></span>!
+    </div>
+    <script>
+      MinecraftAPI.getServerStatus('81.170.199.39', {
+        port: 25565
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+
+        document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+      });
+    </script>
+    </body>
+</html>>
