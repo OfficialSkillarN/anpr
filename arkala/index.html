@@ -27,6 +27,11 @@
       Arkala är just nu <span style="color: white;" class="server-online">hej</span>!
     </div>
     <p style="font-size: 45px;"><span id="players"></span></p>
+	<script language="javascript">
+	setInterval(function(){
+	   window.location.reload(1);
+	}, 30000);
+	</script>
     <script>
       MinecraftAPI.getServerStatus('81.170.199.39', {
         port: 25565
